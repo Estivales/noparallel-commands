@@ -1,0 +1,7 @@
+build
+*.pyc
+dist
+.coverage
+.DS_Store
+.idea
+Pipfile*
