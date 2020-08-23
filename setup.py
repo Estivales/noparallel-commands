@@ -1,24 +1,22 @@
-#!/usr/bin/env python
-import os
-from setuptools import setup
+import setuptools
 
-os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
-readme = open('README.rst').read()
-history = open('HISTORY.rst').read()
-
-setup(
-    name='noparallel-commands',
-    version=1.0,
-    description='noparallel is a Django application that makes it easy to prevent parallel django commands execution.',
-    long_description=readme + '\n\n' + history,
+setuptools.setup(
+    name='noparallel-commands-estivales',
+    version="0.0.1",
     author='Douglas Estivales',
     author_email='estivaless@gmail.com ',
-    url='https://github.com/Estivales/noparallel-commands',
-    packages=['noparallel-commands'],
-    include_package_data=True,
-    zip_safe=False,
-    install_requires=[
-        'django>=3.1',
-    ]
+    description='noparallel is a Django application that makes it easy to prevent parallel django commands execution.',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/pypa/sampleproject",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.6',
 )
